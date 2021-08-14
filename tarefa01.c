@@ -8,7 +8,7 @@ int main()
     #pragma omp parallel num_threads(2) // seta o número de threads em 2 
     {
         int tid = omp_get_thread_num(); // lê o identificador da thread 
-        #pragma omp parallel for ordered schedule(dynamic)
+        #pragma omp for ordered schedule(dynamic)
         for(i = 1; i <= 3; i++) 
         {
             #pragma omp ordered
